@@ -4,7 +4,7 @@ package CampingStore242;
  * author Sanchit Patel
  */
 
- public class Cash extends Payment{
+ public abstract class Cash extends Payment{
     //Cash takes payCharge and passes it to Payment using parent
     public Cash(double payCharge){
         super(payCharge);

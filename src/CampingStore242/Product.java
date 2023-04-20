@@ -4,6 +4,7 @@ package CampingStore242;
  * @author Sanchit Patel
  */
 public class Product {
+    public int id;
     String name;
     String brand;
     String desc;
@@ -12,15 +13,13 @@ public class Product {
     String size;
 
 
-    public Product(String name, String brand, String desc, String size, double price, String condition) {
+    public Product(String name, String brand, String desc, double price, String condition, int id) {
         this.name = name;
         this.brand = brand;
         this.desc = desc;
         this.price = price;
         this.condition = condition;
-        this.size = size;
-
-
+        this.id = id;
     }
 
     /**Getter Methods for Name
@@ -54,7 +53,6 @@ public class Product {
     /**
      *Setter Methods for Brand
      */
-
     public void setBrand(String brand) {
         this.brand = brand;
     }
@@ -102,10 +100,24 @@ public class Product {
         this.size = size;
     }
 
-    //The Str Method is returning the String representation of the Product
-    public String str () {
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public void add(Product selectedProduct) {
+    }
+
+    /**The toString Method is returning the String representation of the Product
+     *
+     * @return
+     */
+    public String toString() {
         return "name = " + getName() + "\n" + "Brand = " + getBrand() + "\n" + "Desc = " + getDesc() + "\n" + "Price = " + getPrice() + "\n" +
                 "Condition = " + getCondition() + "\n" + "Size = " + getSize();
     }
-}
 
+
+}

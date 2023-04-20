@@ -6,14 +6,22 @@ import java.util.Date;
  * @Author Sanchit Patel
  */
 
-public class CreditCard extends Payment{
+public abstract class CreditCard extends Payment{
     /**Class Properties
      *
      */
     private String cardName;
     private String cardNumber;
-    private String cvv;
+    private int cvv;
     private Date setCreditcardexpiryDate;
+    private String expirationDate;
+    public CreditCard(double payCharge, String cardNumber, String cardHolderName, String expirationDate) {
+        super(payCharge);
+        this.cardNumber = cardNumber;
+        this.cardName = cardHolderName;
+        this.expirationDate = expirationDate;
+        this.cvv = cvv;
+    }
 
 
     /**Constructor Method
@@ -35,4 +43,5 @@ public class CreditCard extends Payment{
     public Date getSetCreditcardexpiryDate(){
         return setCreditcardexpiryDate;
     }
+
 }

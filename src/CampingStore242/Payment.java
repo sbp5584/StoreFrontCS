@@ -6,8 +6,7 @@ package CampingStore242;
 public abstract class Payment {
     private double paymentCharge;
 
-    public Payment(double payCharge)
-    {
+    public Payment(double payCharge) {
         this.paymentCharge = payCharge;
     }
 
@@ -24,5 +23,16 @@ public abstract class Payment {
      * @param pay
      * @return
      */
-    public abstract double handlePayment(double pay);
+    
+    public double handlePayment(double pay) {
+        System.out.println("Processing credit card payment...");
+        // logic to process credit card payment
+        double totalPayment = pay + getPaymentCharge();
+        System.out.println("Credit card payment of " + totalPayment + " processed successfully.");
+        return totalPayment;
+    }
+
+    public abstract boolean process();
 }
+
+
