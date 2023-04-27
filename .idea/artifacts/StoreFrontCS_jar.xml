@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="StoreFrontCS:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/StoreFrontCS_jar</output-path>
+    <root id="archive" name="StoreFrontCS.jar">
+      <element id="module-output" name="StoreFrontCS" />
+    </root>
+  </artifact>
+</component>
