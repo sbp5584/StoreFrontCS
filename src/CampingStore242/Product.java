@@ -1,123 +1,128 @@
 package CampingStore242;
-
-/**This defines a product class with various attributes
- * @author Sanchit Patel
+/**
+ * Represents a product in the camping store.
  */
 public class Product {
-    public int id;
-    String name;
-    String brand;
-    String desc;
-    double price;
-    String condition;
-    String size;
+    // Private fields for the product's properties
+    private int id;
+    private String name;
+    private String brand;
+    private String size;
+    private String desc;
+    private double price;
+    private String condition;
 
-
-    public Product(String name, String brand, String desc, double price, String condition, int id) {
+    /**
+     * Constructs a new product with the given parameters.
+     * @param id the product's ID
+     * @param name the product's name
+     * @param brand the product's brand
+     * @param size the product's size
+     * @param desc the product's description
+     * @param price the product's price
+     * @param condition the product's condition
+     */
+    public Product(int id, String name, String brand, String size, String desc, double price, String condition) {
+        this.id = id;
         this.name = name;
         this.brand = brand;
+        this.size = size;
         this.desc = desc;
         this.price = price;
         this.condition = condition;
-        this.id = id;
     }
 
-    /**Getter Methods for Name
-     * @return name
+    /**
+     * @return the product's name
      */
     public String getName() {
         return name;
     }
 
     /**
-     *Setter Methods for Name
+     * Sets the product's name.
+     * @param name the new name for the product
      */
     public void setName(String name) {
         this.name = name;
     }
 
-    /** Getter Method for Brand
-     * @return brand
+
+    /**
+     * @return the product's brand
      */
     public String getBrand() {
         return brand;
     }
 
-    /** Getter Method for Desc
-     * @return Desc
+    /**
+     * @return the product's description
      */
     public String getDesc() {
         return desc;
     }
 
-    /**
-     *Setter Methods for Brand
-     */
+    // Setter method for the product brand
     public void setBrand(String brand) {
         this.brand = brand;
     }
-    /** Getter Method for Price
-     * @return Price
-     */
+
+    // Getter method for the product price
     public double getPrice() {
         return price;
     }
 
-    /**
-     *Setter Methods for Price
-     */
+    // Setter method for the product price
     public void setPrice(double price) {
         this.price = price;
     }
 
-    /** Getter Method for Condition
-     * @return Condition
-     */
+    // Getter method for the product condition
     public String getCondition() {
         return condition;
     }
-    /**
-     * Setter Method for Condition
-     */
+
+    // Setter method for the product condition
     public void setCondition(String condition) {
         this.condition = condition;
     }
 
-
-    /** Getter Method for Size
-     * @return size
-     */
-
+    // Getter method for the product size
     public String getSize() {
-
         return size;
     }
 
-    /**
-     * Setter Method for size
-     */
+    // Setter method for the product size
     public void setSize(String size) {
         this.size = size;
     }
 
+    // Getter method for the product id
     public int getId() {
         return id;
     }
 
+    // Setter method for the product id
     public void setId(int id) {
         this.id = id;
     }
+
+    // Method to add another product to this product
     public void add(Product selectedProduct) {
     }
 
-    /**The toString Method is returning the String representation of the Product
-     *
-     * @return
+    /**
+     * Returns a string representation of the product's properties.
+     * @return a string representation of the product
      */
+    @Override
     public String toString() {
         return "name = " + getName() + "\n" + "Brand = " + getBrand() + "\n" + "Desc = " + getDesc() + "\n" + "Price = " + getPrice() + "\n" +
                 "Condition = " + getCondition() + "\n" + "Size = " + getSize();
     }
 
-
+    // Method to get the object's theme
+    public Object getTheme() {
+        return getTheme();
+}
 }

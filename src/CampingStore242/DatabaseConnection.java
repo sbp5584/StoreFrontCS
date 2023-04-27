@@ -1,9 +1,18 @@
 package CampingStore242;
-
+/**
+ * DatabaseConnection class for managing database operations related to the Customer class.
+ *
+ * @author Sanchit Patel
+ */
 import java.sql.*;
 import java.util.*;
 
 public class DatabaseConnection {
+    /**
+     * Reads all customer records from the database and returns them as an ArrayList.
+     *
+     * @return An ArrayList of Customer objects
+     */
 
     public static void main(String[] args) {
 
@@ -17,7 +26,7 @@ public class DatabaseConnection {
         readAllSQL();
     }
 
-    private static void readAllSQL() {
+    static ArrayList<Customer> readAllSQL() {
         ArrayList<Customer> customers = new ArrayList<Customer>();
         try {
             // Here, "BikeStore" is the database name, "root" is the username and "password" is the password
@@ -37,7 +46,13 @@ public class DatabaseConnection {
         } catch (Exception e) {
             System.out.println(e);
         }
+        return customers;
     }
+    /**
+     * Reads a specific customer record by ID from the database and prints it.
+     *
+     * @param id The ID of the customer to read
+     */
 
     private static void readByIdSQL(int id) {
         try {
@@ -58,8 +73,13 @@ public class DatabaseConnection {
             System.out.println(e);
         }
     }
-
-    private static void createSQL(int id, Customer Tpcs) {
+    /**
+     * Inserts a new customer record into the database.
+     *
+     * @param id The ID of the customer
+     * @param Tpcs The Customer object containing the data to insert
+     */
+    static void createSQL(int id, Customer Tpcs) {
         try {
             // Here, "Bike Store" is the database name, "root" is the username and "password" is the password
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -76,7 +96,13 @@ public class DatabaseConnection {
             System.out.println(e);
         }
     }
-    private static void updateSQL(int id, Customer Tpcs) {
+    /**
+     * Updates an existing customer record in the database.
+     *
+     * @param id The ID of the customer to update
+     * @param Tpcs The Customer object containing the updated data
+     */
+    static void updateSQL(int id, Customer Tpcs) {
         try {
             // Here, "Bike Store" is the database name, "root" is the username and "password" is the password
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -93,8 +119,13 @@ public class DatabaseConnection {
             System.out.println(e);
         }
     }
+    /**
+     * Deletes a customer record from the database by ID.
+     *
+     * @param id The ID of the customer to delete
+     */
 
-    private static void deleteSQL(int id) {
+    static void deleteSQL(int id) {
         try {
             // Here, "Tpcs" is the database name, "root" is the username and "password" is the password
             Class.forName("com.mysql.cj.jdbc.Driver");

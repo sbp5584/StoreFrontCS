@@ -7,17 +7,8 @@ package CampingStore242;
 public class Lantern extends Product {
     private String type;
 
-    /**
-     * Constructor for the Lantern class
-     * @param name - the name of the lantern
-     * @param brand - the brand of the lantern
-     * @param desc - a description of the lantern
-     * @param price - the price of the lantern
-     * @param condition - the condition of the lantern (e.g. new, used, refurbished)
-     * @param type - the type of the lantern (e.g. LED, gas, electric)
-     */
-    public Lantern(String name, String brand, String desc, double price, String condition, String type, int id) {
-        super(name, brand, desc, price, condition, id);
+    public Lantern(int id, String brand, String name, String desc, double price, String condition, String type) {
+        super(id, name, brand, "", desc, price, condition);
         this.type = type;
     }
 
